@@ -1,0 +1,21 @@
+<div class="post-container">
+    <div class="dashboardImg">
+        <h1>Welcome to Bloging Page</h1>
+        <img class="img-dash" [src]="image" alt="blog image">
+    </div>
+    <ng-container *ngFor="let post of postList">
+        <div class="blog-container">
+            <div class="blog-card">
+                <div>
+                    <img [src]="post.img" style="width:220px; height:140px;">
+                </div>
+                <div class="blog-name"><h4>{{post.title}}</h4></div>
+                <div class="blog-description"><p>{{post.desp.slice(0, 80)}}...</p></div>
+                <div class="blog-buttons">
+                    <button class="btn btn-show">Show Deatils</button>
+                </div>
+            </div>
+        </div>  
+    </ng-container>
+</div>
+
