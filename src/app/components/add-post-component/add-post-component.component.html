@@ -2,6 +2,8 @@
     <form  (ngSubmit)="onSubmit()"  #myPost="ngForm">
         <label class="lab-title">Title</label><br>
         <input  ngModel type="text" class="title" name="title" ><br>
+        <label class="lab-title">Add Image URL</label><br>
+        <input  ngModel type="text"  name="image" ><br>
         <label class="lab-description">Description</label><br>
         <textarea ngModel name="desp" id="" cols="30" rows="8" class="description"></textarea><br>
         <input type="submit" value="Add Post">
