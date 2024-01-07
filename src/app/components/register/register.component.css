@@ -1,0 +1,35 @@
+.innerForm {
+    display: flex;
+    justify-content: center;
+   
+    padding: 30px 0px;
+
+}
+
+.form-div{
+    width: 500px;
+    margin-top: 30px;
+    padding: 80px 30px;
+    background-color: #B2A59B;
+    /* border: 1px solid brown; */
+    border-radius: 5px;
+}
+
+.text{
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.field{
+    padding: 10px 30px;
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #607274;
+}
+
+.button{
+    width: 100%;
+    margin: 15px 0px;
+}

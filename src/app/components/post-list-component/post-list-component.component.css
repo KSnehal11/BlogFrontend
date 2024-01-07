@@ -36,6 +36,9 @@
 .blog-name {
     text-align: center;
   }
+  .author{
+    margin-left: 20px;
+  }
 .blog-description {
     margin: 10px 0px;
     padding: 5px 10px;

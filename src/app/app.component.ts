@@ -4,6 +4,7 @@ import { RouterModule, RouterOutlet } from '@angular/router';
 import { PostListComponentComponent } from './components/post-list-component/post-list-component.component';
 import { AddPostComponentComponent } from './components/add-post-component/add-post-component.component';
 import { FormsModule } from '@angular/forms';
+import { AuthenticationService } from './services/authentication.service';
 
 @Component({
   selector: 'app-root',
@@ -13,5 +14,14 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
- 
+
+    constructor(private _authServ :AuthenticationService){}
+
+    loginFn(){
+      this._authServ.login();
+    }
+
+    logoutFn(){
+      this._authServ.logout();
+    }
 }

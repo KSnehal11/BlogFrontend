@@ -4,8 +4,8 @@
       <li><a routerLinkActive="active" routerLink="blog">Blogs</a></li>
       <li><a routerLinkActive="active" routerLink="addPost">Add Post</a></li>
       <div style="float: right;">
-        <button class="btn btn-danger button">login</button>
-        <button class="btn btn-danger button">logout</button>
+        <a (click)="loginFn()" routerLink="login" class="btn btn-danger button">login</a>
+        <a (click)="logoutFn()" routerLink="" class="btn btn-danger button">logout</a>
       </div>
     </ul>
     <router-outlet></router-outlet>
