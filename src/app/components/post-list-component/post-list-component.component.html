@@ -13,10 +13,13 @@
                 <div class="author"><p> -by {{post.author}}</p></div>
                 <div class="blog-description"><p>{{post.desp.slice(0, 80)}}...</p></div>
                 <div class="blog-buttons">
-                    <button class="btn btn-show">Show Deatils</button>
+                    <a routerLink="/blog/myblog/{{post.id}}" class="btn btn-show">Show Deatils</a>
+                    <a routerLink="/blog/addcomment" class="btn btn-show">AddComment</a>
+                    
                 </div>
             </div>
         </div>  
     </ng-container>
+    
 </div>
 

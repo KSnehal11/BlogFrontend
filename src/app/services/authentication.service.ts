@@ -7,7 +7,7 @@ export class AuthenticationService {
 
   constructor() { }
 
-  loggenIn : boolean;
+  loggenIn : boolean =false;
 
   public login (){
       this.loggenIn=true;

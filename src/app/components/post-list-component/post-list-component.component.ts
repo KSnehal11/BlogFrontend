@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { PostlistService } from '../../services/postlist.service';
+import { RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-post-list-component',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule , RouterOutlet , RouterModule],
   templateUrl: './post-list-component.component.html',
   styleUrl: './post-list-component.component.css'
 })
