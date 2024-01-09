@@ -1,6 +1,6 @@
 <div class="main-form container">
     <div class="innerForm">
-        <form (ngSubmit) = "onSubmit()" #myForm = "ngForm" class="form-div ">
+        <form (ngSubmit) = "onSubmit(myForm.value)" #myForm = "ngForm" class="form-div ">
             <label class="text">Email:</label><br>
             <input type="email" class="field" placeholder="Enter your email"><br>
             <label class="text">Password:</label><br>

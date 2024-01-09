@@ -1,3 +1,11 @@
 {
-   "users":[]
+  "users": [
+    {
+      "firstname": "snehal",
+      "lastname": "kupekar",
+      "email": "snehal.kupekar@itcinfotech.com",
+      "password": "12345",
+      "id": 1
+    }
+  ]
 }
