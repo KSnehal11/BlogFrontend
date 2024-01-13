@@ -2,10 +2,8 @@
 <div class="main-form container">
     <div class="innerForm">
         <form (ngSubmit) = "onSubmit(myForm.value)" #myForm = "ngForm" class="form-div ">
-            <label class="text">Firstname:</label><br>
-            <input ngModel name="fname" type="text" class="field" placeholder="Enter your firstname"><br>
-            <label class="text">Lastname:</label><br>
-            <input ngModel name="lname" type="text" class="field" placeholder="Enter your lastname"><br>
+            <label class="text">Username:</label>
+            <input ngModel name="username" type="text" class="field" placeholder="Enter Your Username" type>
             <label class="text">Email:</label><br>
             <input ngModel name="email" type="email" class="field" placeholder="Enter your Email"><br>
             <label class="text">Password:</label><br>

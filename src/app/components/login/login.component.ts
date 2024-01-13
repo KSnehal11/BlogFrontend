@@ -21,13 +21,15 @@ export class LoginComponent {
   ) {}
 
   onSubmit(val) {
-    const username = val.email;
+    const username = val.username;
     const password = val.password;
 
     this.userServ.login(username, password).subscribe((data) => {
+      // console.log("login data" + data)
       if (data.length > 0) {
         this.authServ.login();
         this.router.navigate(['blog'] , username)
+        // console.log("token" + data);
       }
       else{
         alert("Invalid Data! ");

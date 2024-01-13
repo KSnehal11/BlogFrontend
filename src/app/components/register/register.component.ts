@@ -19,8 +19,7 @@ export class RegisterComponent {
   private flag: boolean = false;
 
   onSubmit(val) {
-    const firstname = val.fname;
-    const lastname = val.lname;
+    const username = val.username
     const email = val.email;
     const password = val.password;
     const cpasswd = val.cpassword;
@@ -30,10 +29,11 @@ export class RegisterComponent {
     }
     else {
       this.userServ.register(
-        { firstname: firstname,
-          lastname :lastname, 
-          email:email, 
-          password:password }).subscribe(() => { console.log("user added") })
+        {
+          username: username,
+          password: password,
+          email: email
+        }).subscribe((val) => { console.log("user added" + val) })
     }
   }
 

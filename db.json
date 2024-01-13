@@ -1,8 +1,7 @@
 {
   "users": [
     {
-      "firstname": "snehal",
-      "lastname": "kupekar",
+      "username":"snehal11",
       "email": "snehal.kupekar@itcinfotech.com",
       "password": "12345",
       "id": 1
