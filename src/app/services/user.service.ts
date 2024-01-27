@@ -11,7 +11,7 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   private token :String ;
-  private apiUrl = "http://localhost:8020"
+  private apiUrl = "http://localhost:8083/snehal-authentication/auth"
 
   register(user: any): Observable<any> {
     return this.http.post(`${this.apiUrl}/register`, user);

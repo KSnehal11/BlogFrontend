@@ -58,12 +58,17 @@
   }
 .btn {
     width: 140px;
-    height: 30px;
+    height: auto;
     border: none;
     margin: 5px 3px;
+    border-radius: 15px;
   }
 
 .btn-show {
-    background-color: #abebc6;
+    background-color:rgb(93, 93, 93);
+    color: white;
   }
-  
+.btn-detail{
+  background-color: #333;
+  color: #fff;
+}

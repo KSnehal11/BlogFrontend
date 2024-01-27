@@ -5,11 +5,12 @@ import { PostListComponentComponent } from './components/post-list-component/pos
 import { AddPostComponentComponent } from './components/add-post-component/add-post-component.component';
 import { FormsModule } from '@angular/forms';
 import { AuthenticationService } from './services/authentication.service';
+import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet,PostListComponentComponent , AddPostComponentComponent,FormsModule, RouterModule],
+  imports: [CommonModule, RouterOutlet,PostListComponentComponent , AddPostComponentComponent,FormsModule, RouterModule , FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
