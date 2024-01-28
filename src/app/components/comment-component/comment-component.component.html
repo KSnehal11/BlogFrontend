@@ -1,1 +1,25 @@
-<p>comment-component works!</p>
+<div class="comment-main" *ngIf="comments.length > 0">
+    <h4>Comments</h4>
+    <ul>
+      <li class="comment" *ngFor="let comment of comments">
+        <strong>{{ comment.author }}:</strong> {{ comment.text }}
+      </li>
+    </ul>
+  </div>
+
+<div class="comment-main">
+    <h4>Add Comment</h4>
+    <form [formGroup]="commentForm" (ngSubmit)="addComment()">
+      <div>
+        <label class="text" for="author">Author Name:</label><br>
+        <input class="field" type="text" id="author" formControlName="author" required>
+      </div>
+      <div>
+        <label class="text" for="commentText">Comment:</label><br>
+        <textarea placeholder="Give your good wishes.." class="field" id="commentText" formControlName="commentText" required></textarea>
+      </div>
+      <button class=" btn btn-success" type="submit" [disabled]="commentForm.invalid">Add</button>
+    </form>
+  </div>
+
+  

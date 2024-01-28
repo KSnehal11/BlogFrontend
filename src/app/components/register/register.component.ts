@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, ViewChild } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
-import { RouterModule, RouterOutlet } from '@angular/router';
+import { Router ,RouterModule, RouterOutlet } from '@angular/router';
 import { UserService } from '../../services/user.service';
 
 @Component({
@@ -12,11 +12,12 @@ import { UserService } from '../../services/user.service';
   styleUrl: './register.component.css'
 })
 export class RegisterComponent {
-  constructor(private userServ: UserService) { }
+  constructor(private userServ: UserService , private router: Router) { }
 
   // @ViewChild("myform") form  : NgForm;
 
   private flag: boolean = false;
+  showAlert : boolean = false;
 
   onSubmit(val) {
     const username = val.username
@@ -33,7 +34,11 @@ export class RegisterComponent {
           username: username,
           password: password,
           email: email
-        }).subscribe((val) => { console.log("user added" + val) })
+        }).subscribe((val) => { 
+          this.showAlert = true;
+          this.router.navigate(['login']);
+
+        })
     }
   }
 
