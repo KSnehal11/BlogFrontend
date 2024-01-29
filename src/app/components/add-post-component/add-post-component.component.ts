@@ -24,11 +24,11 @@ export class AddPostComponentComponent {
   @ViewChild('myPost') form: NgForm;
   constructor(private serv: PostlistService , private router:Router) {}
 
-  card: any;
   image = 'assets/image/dashImg.jpg';
   onSubmit() {
     const randomId = uuidv4();
     this.serv.postlist.push({
+      
       id:randomId,
       img: this.form.value.image,
       author: this.form.value.author,

@@ -13,7 +13,7 @@ import { PostlistService } from '../../services/postlist.service';
 export class PostDetailComponentComponent {
 
   constructor(private serv : PostlistService , private activeroute : ActivatedRoute ){}
-
+  
   post: any;
   postId: any = 0;
 

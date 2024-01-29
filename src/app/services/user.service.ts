@@ -10,7 +10,7 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  private token :String ;
+  token: String;
   private apiUrl = "http://localhost:8083/snehal-authentication/auth"
 
   register(user: any): Observable<any> {
@@ -19,10 +19,10 @@ export class UserService {
 
   login(username: string, password: string): Observable<any> {
     return this.http.get<Map<String, String>>(`${this.apiUrl}/login?username=${username}&password=${password}`)
-    .pipe(map(response => {
-      this.token=response['token']
-      return this.token;
-    }))
+      .pipe(map(response => {
+        this.token = response['token']
+        return this.token;
+      }))
   }
 
 

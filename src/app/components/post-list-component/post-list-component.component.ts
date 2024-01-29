@@ -1,7 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { PostlistService } from '../../services/postlist.service';
 import { RouterModule, RouterOutlet } from '@angular/router';
+import { UserService } from '../../services/user.service';
+import { GetpostService } from '../../services/getpost.service';
+import { response } from 'express';
 
 @Component({
   selector: 'app-post-list-component',
@@ -13,13 +16,25 @@ import { RouterModule, RouterOutlet } from '@angular/router';
 export class PostListComponentComponent implements OnInit {
 
   constructor(private serv : PostlistService){}
+  private userTokenObj :UserService = inject(UserService)
+  private objList : GetpostService = inject(GetpostService)
+
+  token : string = this.userTokenObj.token;
+
 
   image = "assets/image/dashImg.jpg"
   postList : any[] =[]
 
   ngOnInit(): void {
     console.log("hello")
-    this.postList = this.serv.postlist
+    this.getPostList();
+    // this.postList = this.serv.postlist
   }
   
+  getPostList(){
+    this.objList.getAllBlogs().subscribe((response :any[])=>{
+      console.log("all post" + response)
+      this.postList = response
+    })
+  }
 }
