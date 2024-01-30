@@ -19,7 +19,10 @@ export class PostDetailComponentComponent {
 
   ngOnInit(): void {
     this.postId = this.activeroute.snapshot.params['id'];
-    this.post = this.serv.postlist.find((x) => x.id == this.postId);
+    this.serv.postList$.subscribe(postList => {
+      this.post = postList.find((x) => x.id == this.postId);
+    });
+    // this.post = this.serv.postlist.find((x) => x.id == this.postId);
   }
 
   

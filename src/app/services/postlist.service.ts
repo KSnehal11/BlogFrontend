@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -6,6 +7,18 @@ import { Injectable } from '@angular/core';
 export class PostlistService {
 
   constructor() { }
+
+
+ 
+
+  private postListSubject = new BehaviorSubject<any[]>([]);
+  postList$ = this.postListSubject.asObservable();
+
+  updatePostList(postList: any[]) {
+    this.postListSubject.next(postList);
+  }
+
+
 
   postlist = [
     {

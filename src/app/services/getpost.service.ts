@@ -28,10 +28,13 @@ export class GetpostService {
   // }
 
   getAllBlogs(): Observable<any> {
-    return this.http.get<List<Card>>(`${this.dashboardurl}/showBlogs`,)
+    return this.http.get<any[]>(`${this.dashboardurl}/showBlogs`,)
+  }
+
+  addPost(userId: string, postData: any): Observable<any> {
+    return this.http.post<any>(`${this.dashboardurl}//dashboard/addBlogs/${userId}`, postData);
   }
 
 
-
-  addBlog()
+  // addBlog()
 }

@@ -19,7 +19,7 @@ export class PostListComponentComponent implements OnInit {
   private userTokenObj :UserService = inject(UserService)
   private objList : GetpostService = inject(GetpostService)
 
-  token : string = this.userTokenObj.token;
+  private token = this.userTokenObj.token;
 
 
   image = "assets/image/dashImg.jpg"
@@ -28,13 +28,15 @@ export class PostListComponentComponent implements OnInit {
   ngOnInit(): void {
     console.log("hello")
     this.getPostList();
+    
     // this.postList = this.serv.postlist
   }
   
   getPostList(){
     this.objList.getAllBlogs().subscribe((response :any[])=>{
-      console.log("all post" + response)
+      
       this.postList = response
+      this.serv.updatePostList(this.postList);
     })
   }
 }
